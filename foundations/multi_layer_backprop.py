@@ -30,7 +30,7 @@ class Solution:
         z1 = np.dot(W1_arr, x_arr) + b1_arr
         a1 = np.maximum(0, z1)
         z2 = np.dot(W2_arr, a1) + b2_arr
-        loss = np.mean((z2 - y_true) ** 2)
+        loss = np.mean((z2 - y_arr) ** 2)
 
         # Backward pass
         n = len(y_arr)
