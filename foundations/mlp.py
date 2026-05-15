@@ -13,7 +13,9 @@ class Solution:
         num_layers = len(weights)
         h = x
         for i in range(num_layers):
-            h = np.dot(weights[i].T, h) + biases[i]  # Linear transformation
+            # The @ symbol is Python's built-in matrix multiplication operator
+            # It's a modern, clean way and handles batches gracefully
+            h = h @ weights[i] + biases[i]  # Linear transformation, 
             if i < num_layers - 1:
                 h = np.maximum(0, h)  # apply ReLU at each layer, except the last one
         
