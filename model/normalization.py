@@ -12,7 +12,7 @@ class Solution:
 
         # Calculate mean and variance
         mean = np.mean(x)
-        var = np.mean((x - mean) ** 2)
+        var = np.var(x)  # built-in function for variance: np.var(). 
 
         # Normalize, scale and shift
         x_hat = (x - mean) / np.sqrt(var + eps)
